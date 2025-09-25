@@ -1,13 +1,13 @@
 /* --- Variables & Global Styles --- */
 
 :root {
-    --primary-color: #6D0000;
-    /* UNILAG Maroon */
-    --secondary-color: #4B0000;
-    /* Darker Maroon */
-    --accent-color: #FFC72C;
-    /* UNILAG Gold */
-    --dark-maroon: #3B0000;
+    --primary-color: #006400;
+    /* Dark Green */
+    --secondary-color: #004d00;
+    /* Darker Green */
+    --accent-color: #90EE90;
+    /* Light Lime Green */
+    --dark-green: #003300;
     --light-gray: #F8F9FA;
     --text-color: #333;
     --text-color-light: #555;
@@ -39,7 +39,7 @@ a {
     font-weight: 700;
     text-align: center;
     margin-bottom: 50px;
-    color: var(--dark-maroon);
+    color: var(--dark-green);
 }
 
 
@@ -107,7 +107,7 @@ a {
 }
 
 .main-header.scrolled .main-nav li a {
-    color: var(--dark-maroon);
+    color: var(--dark-green);
 }
 
 .main-nav li a:hover {
@@ -153,15 +153,15 @@ a {
     font-weight: 600;
     padding: 10px 25px;
     border-radius: 50px;
-    background-image: linear-gradient(45deg, var(--accent-color), #ffb300);
-    color: var(--dark-maroon);
-    box-shadow: 0 4px 15px rgba(255, 199, 44, 0.4);
+    background-image: linear-gradient(45deg, var(--accent-color), #78c278);
+    color: var(--dark-green);
+    box-shadow: 0 4px 15px rgba(144, 238, 144, 0.4);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .btn-sponsor:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(255, 199, 44, 0.6);
+    box-shadow: 0 6px 20px rgba(144, 238, 144, 0.6);
 }
 
 
@@ -171,7 +171,6 @@ a {
     color: #fff;
     text-align: center;
     padding: 180px 20px 120px;
-    /* Adjusted padding for fixed header */
     position: relative;
     background-image: url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1740&q=80');
     background-size: cover;
@@ -184,7 +183,8 @@ a {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(45deg, rgba(109, 0, 0, 0.85), rgba(59, 0, 0, 0.85));
+    background: linear-gradient(45deg, rgba(0, 100, 0, 0.85), rgba(0, 51, 0, 0.85));
+    /* Green Gradient Overlay */
     z-index: 1;
 }
 
@@ -226,11 +226,11 @@ a {
 
 .btn-primary {
     background-color: var(--accent-color);
-    color: var(--dark-maroon);
+    color: var(--dark-green);
 }
 
 .btn-primary:hover {
-    background-color: #eab621;
+    background-color: #7fdd7f;
     transform: translateY(-3px);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
@@ -285,7 +285,7 @@ a {
 .card h3 {
     font-family: var(--font-primary);
     font-size: 1.5rem;
-    color: var(--dark-maroon);
+    color: var(--dark-green);
 }
 
 .card-link {
@@ -418,7 +418,7 @@ a {
 /* --- Email Signup Section --- */
 
 .email-signup {
-    background-color: var(--dark-maroon);
+    background-color: var(--dark-green);
     color: #fff;
     padding: 60px 0;
     text-align: center;
@@ -468,7 +468,7 @@ a {
 
 .subscription-form button {
     background-color: var(--accent-color);
-    color: var(--dark-maroon);
+    color: var(--dark-green);
     border: none;
     border-radius: 50px;
     padding: 12px 25px;
@@ -480,7 +480,7 @@ a {
 }
 
 .subscription-form button:hover {
-    background-color: #eab621;
+    background-color: #7fdd7f;
 }
 
 
@@ -565,7 +565,7 @@ footer h4 {
 .main-header.scrolled .nav-toggle-label span,
 .main-header.scrolled .nav-toggle-label span::before,
 .main-header.scrolled .nav-toggle-label span::after {
-    background: var(--dark-maroon);
+    background: var(--dark-green);
 }
 
 .nav-toggle-label span::before {
@@ -594,7 +594,7 @@ footer h4 {
 
 .main-header.scrolled .nav-toggle:checked~.nav-toggle-label span::before,
 .main-header.scrolled .nav-toggle:checked~.nav-toggle-label span::after {
-    background: var(--dark-maroon);
+    background: var(--dark-green);
 }
 
 
@@ -634,7 +634,7 @@ footer h4 {
         gap: 0;
     }
     .nav-toggle:checked~.main-nav li a {
-        color: var(--dark-maroon);
+        color: var(--dark-green);
         display: block;
         padding: 15px;
         border-radius: 0;
