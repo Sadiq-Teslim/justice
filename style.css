@@ -1,10 +1,13 @@
 /* --- Variables and Global Styles --- */
 
 :root {
-    --primary-color: #2575FC;
-    --secondary-color: #6A11CB;
-    --accent-color: #FF6B6B;
-    --dark-blue: #0A2463;
+    --primary-color: #6D0000;
+    /* UNILAG Maroon */
+    --secondary-color: #4B0000;
+    /* Darker Maroon */
+    --accent-color: #FFC72C;
+    /* UNILAG Gold */
+    --dark-maroon: #3B0000;
     --light-gray: #F8F9FA;
     --text-color: #333;
     --text-color-light: #555;
@@ -26,13 +29,18 @@ body {
     padding: 0 20px;
 }
 
+a {
+    text-decoration: none;
+    /* No underlines on any links */
+}
+
 .section-title {
     font-family: var(--font-primary);
     font-size: 2.8rem;
     font-weight: 700;
     text-align: center;
     margin-bottom: 50px;
-    color: var(--dark-blue);
+    color: var(--dark-maroon);
 }
 
 
@@ -73,15 +81,16 @@ body {
 
 .advertise-btn {
     background: var(--accent-color);
-    color: #fff;
+    color: var(--dark-maroon);
     padding: 6px 14px;
     border-radius: 20px;
     font-weight: 600;
+    transition: background-color 0.3s ease;
 }
 
 .advertise-btn:hover {
-    background: #e05a5a;
-    color: #fff;
+    background: #eab621;
+    color: var(--dark-maroon);
 }
 
 .main-header {
@@ -111,8 +120,13 @@ body {
     font-family: var(--font-primary);
     font-weight: 600;
     padding: 10px 20px;
-    color: var(--dark-blue);
+    color: var(--dark-maroon);
     position: relative;
+    transition: color 0.3s ease;
+}
+
+.main-nav li a:hover {
+    color: var(--primary-color);
 }
 
 .main-nav li a::after {
@@ -136,17 +150,36 @@ body {
     border: none;
     font-size: 1.2rem;
     cursor: pointer;
-    color: var(--dark-blue);
+    color: var(--dark-maroon);
 }
 
 
 /* --- Hero Section --- */
 
 .hero {
-    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
     color: #fff;
     text-align: center;
     padding: 120px 20px;
+    position: relative;
+    background-image: url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1740&q=80');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(109, 0, 0, 0.85), rgba(59, 0, 0, 0.85));
+    /* Maroon Gradient Overlay */
+    z-index: 1;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2;
 }
 
 .hero-title {
@@ -199,11 +232,11 @@ body {
 
 .btn-primary {
     background-color: var(--accent-color);
-    color: #fff;
+    color: var(--dark-maroon);
 }
 
 .btn-primary:hover {
-    background-color: #e05a5a;
+    background-color: #eab621;
     transform: translateY(-3px);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
@@ -240,6 +273,7 @@ body {
     padding: 40px;
     border-radius: 10px;
     text-align: center;
+    border-bottom: 4px solid var(--primary-color);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -258,7 +292,7 @@ body {
 .card h3 {
     font-family: var(--font-primary);
     font-size: 1.5rem;
-    color: var(--dark-blue);
+    color: var(--dark-maroon);
 }
 
 .card-link {
@@ -351,6 +385,7 @@ body {
 
 .stat-item i {
     font-size: 3rem;
+    color: var(--accent-color);
 }
 
 .stat-number {
@@ -399,7 +434,7 @@ body {
 /* --- Email Signup Section --- */
 
 .email-signup {
-    background-color: var(--dark-blue);
+    background-color: var(--dark-maroon);
     color: #fff;
     padding: 60px 0;
     text-align: center;
@@ -431,7 +466,7 @@ body {
 .email-signup button {
     padding: 15px 30px;
     background-color: var(--accent-color);
-    color: #fff;
+    color: var(--dark-maroon);
     border: none;
     border-radius: 0 30px 30px 0;
     cursor: pointer;
@@ -440,7 +475,7 @@ body {
 }
 
 .email-signup button:hover {
-    background-color: #e05a5a;
+    background-color: #eab621;
 }
 
 
@@ -482,11 +517,11 @@ footer h4 {
 
 .footer-links a {
     color: #aaa;
+    transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
-    color: #fff;
-    text-decoration: underline;
+    color: var(--accent-color);
 }
 
 .footer-contact p {
