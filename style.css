@@ -15,6 +15,13 @@
     --font-secondary: 'Roboto', sans-serif;
 }
 
+
+/* This enables smooth scrolling for the entire page */
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: var(--font-secondary);
     margin: 0;
@@ -175,7 +182,6 @@ a {
     padding: 180px 20px 120px;
     position: relative;
     background-image: url('./images/flier.png');
-    /* <-- FLYER IS NOW THE BACKGROUND */
     background-size: cover;
     background-position: center;
 }
@@ -187,7 +193,6 @@ a {
     right: 0;
     bottom: 0;
     background: linear-gradient(45deg, rgba(0, 51, 0, 0.9), rgba(0, 20, 0, 0.9));
-    /* <-- STRONGER OVERLAY FOR READABILITY */
     z-index: 1;
 }
 
