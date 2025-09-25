@@ -5,8 +5,8 @@
     /* Dark Green */
     --secondary-color: #004d00;
     /* Darker Green */
-    --accent-color: #90EE90;
-    /* Light Lime Green */
+    --accent-color: #FDE047;
+    /* Vibrant Yellow */
     --dark-green: #003300;
     --light-gray: #F8F9FA;
     --text-color: #333;
@@ -38,8 +38,16 @@ a {
     font-size: 2.8rem;
     font-weight: 700;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     color: var(--dark-green);
+}
+
+.section-subtitle {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 50px;
+    color: var(--text-color-light);
+    font-size: 1.1rem;
 }
 
 
@@ -80,9 +88,6 @@ a {
     height: 45px;
 }
 
-
-/* Centered Navigation */
-
 .main-nav {
     position: absolute;
     left: 50%;
@@ -119,9 +124,6 @@ a {
     color: var(--primary-color);
 }
 
-
-/* Right-aligned Actions */
-
 .header-actions {
     display: flex;
     align-items: center;
@@ -153,15 +155,15 @@ a {
     font-weight: 600;
     padding: 10px 25px;
     border-radius: 50px;
-    background-image: linear-gradient(45deg, var(--accent-color), #78c278);
+    background-color: var(--accent-color);
     color: var(--dark-green);
-    box-shadow: 0 4px 15px rgba(144, 238, 144, 0.4);
+    box-shadow: 0 4px 15px rgba(253, 224, 71, 0.4);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .btn-sponsor:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(144, 238, 144, 0.6);
+    box-shadow: 0 6px 20px rgba(253, 224, 71, 0.6);
 }
 
 
@@ -184,7 +186,6 @@ a {
     right: 0;
     bottom: 0;
     background: linear-gradient(45deg, rgba(0, 100, 0, 0.85), rgba(0, 51, 0, 0.85));
-    /* Green Gradient Overlay */
     z-index: 1;
 }
 
@@ -195,13 +196,15 @@ a {
 
 .hero-title {
     font-family: var(--font-primary);
-    font-size: 4rem;
+    font-size: 3.5rem;
     font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .hero-subtitle {
-    font-size: 1.25rem;
-    max-width: 700px;
+    font-size: 1.2rem;
+    max-width: 800px;
     margin: 20px auto 40px;
     opacity: 0.9;
 }
@@ -230,7 +233,7 @@ a {
 }
 
 .btn-primary:hover {
-    background-color: #7fdd7f;
+    background-color: #fdd835;
     transform: translateY(-3px);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
@@ -248,17 +251,51 @@ a {
 }
 
 
+/* --- Conference Topics Section --- */
+
+.topics-section {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.topics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 30px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.topic-item {
+    background-color: var(--light-gray);
+    padding: 30px 20px;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.topic-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.topic-item i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.topic-item span {
+    display: block;
+    font-weight: 600;
+    color: var(--dark-green);
+}
+
+
 /* --- Info Cards Section --- */
 
 .info-cards {
     padding: 80px 0;
     background-color: var(--light-gray);
-}
-
-.info-cards .container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
 }
 
 .card {
@@ -304,114 +341,101 @@ a {
 }
 
 
+/* --- Sponsorship Tiers Section --- */
+
+.sponsorship-section {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.sponsorship-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.sponsor-tier-card {
+    background-color: var(--light-gray);
+    border-top: 4px solid var(--primary-color);
+    border-radius: 10px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sponsor-tier-card:nth-child(1) {
+    border-color: #D4AF37;
+}
+
+
+/* Platinum */
+
+.sponsor-tier-card:nth-child(2) {
+    border-color: #C0C0C0;
+}
+
+
+/* Gold as Silver */
+
+.sponsor-tier-card:nth-child(3) {
+    border-color: #CD7F32;
+}
+
+
+/* Silver as Bronze */
+
+.sponsor-tier-card h3 {
+    font-family: var(--font-primary);
+    color: var(--dark-green);
+    margin: 0 0 10px;
+    font-size: 1.8rem;
+}
+
+.tier-price {
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    display: block;
+}
+
+.sponsor-tier-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.sponsor-tier-card li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 15px;
+    color: var(--text-color-light);
+}
+
+.sponsor-tier-card li i {
+    color: var(--primary-color);
+    margin-top: 4px;
+}
+
+.in-kind-sponsor {
+    text-align: center;
+    margin-top: 40px;
+    background-color: var(--light-gray);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.in-kind-sponsor h4 {
+    color: var(--primary-color);
+}
+
+
 /* --- Featured Speakers Section --- */
 
 .featured-speakers {
     padding: 80px 0;
-}
-
-.speaker-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-}
-
-.speaker {
-    border-radius: 10px;
-    overflow: hidden;
-    position: relative;
-    cursor: pointer;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.speaker img {
-    width: 100%;
-    display: block;
-    transition: transform 0.4s ease;
-}
-
-.speaker:hover img {
-    transform: scale(1.1);
-}
-
-.speaker-info {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
-    color: #fff;
-    padding: 40px 20px 20px;
-    transition: background 0.3s ease;
-}
-
-.speaker-info h4 {
-    font-family: var(--font-primary);
-    margin: 0;
-    color: #fff;
-}
-
-.speaker-info p {
-    margin: 5px 0 0;
-    opacity: 0.8;
-}
-
-
-/* --- Stats Section --- */
-
-.stats {
-    background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
-    padding: 80px 0;
-    color: #fff;
-}
-
-.stats .section-title {
-    color: #fff;
-}
-
-.stats-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-    text-align: center;
-}
-
-.stat-item i {
-    font-size: 3rem;
-    color: var(--accent-color);
-}
-
-.stat-number {
-    display: block;
-    font-family: var(--font-primary);
-    font-size: 3.5rem;
-    font-weight: 700;
-    margin: 10px 0;
-}
-
-
-/* --- Sponsors Section --- */
-
-.sponsors {
-    padding: 80px 0;
-    text-align: center;
-    background: var(--light-gray);
-}
-
-.sponsor-logos {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-    flex-wrap: wrap;
-    filter: grayscale(100%);
-    opacity: 0.7;
-    transition: all 0.4s ease;
-}
-
-.sponsor-logos:hover {
-    filter: grayscale(0%);
-    opacity: 1;
+    background-color: var(--light-gray);
 }
 
 
@@ -480,7 +504,7 @@ a {
 }
 
 .subscription-form button:hover {
-    background-color: #7fdd7f;
+    background-color: #fdd835;
 }
 
 
@@ -600,15 +624,12 @@ footer h4 {
 
 /* ================== MEDIA QUERIES ================== */
 
-
-/* --- TABLETS --- */
-
 @media (max-width: 992px) {
     .section-title {
         font-size: 2.4rem;
     }
     .hero-title {
-        font-size: 3.2rem;
+        font-size: 2.8rem;
     }
     .main-nav,
     .header-actions {
@@ -643,13 +664,10 @@ footer h4 {
         background-color: var(--light-gray);
     }
     .info-cards .container {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
     }
-    .speaker-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .sponsorship-grid {
+        grid-template-columns: 1fr;
     }
     .footer-grid {
         grid-template-columns: 1fr;
@@ -659,9 +677,6 @@ footer h4 {
         justify-content: center;
     }
 }
-
-
-/* --- MOBILE LANDSCAPE & SMALL TABLETS --- */
 
 @media (max-width: 768px) {
     .container {
@@ -674,38 +689,16 @@ footer h4 {
         padding-top: 120px;
     }
     .section-title {
-        font-size: 2rem;
-        margin-bottom: 30px;
+        font-size: 2.2rem;
     }
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
     .hero-subtitle {
         font-size: 1.1rem;
     }
-    .hero-buttons {
-        gap: 10px;
-    }
-    .info-cards .container {
-        grid-template-columns: 1fr;
-    }
-    .speaker-grid {
-        grid-template-columns: 1fr;
-    }
-    .stats-grid {
-        gap: 20px;
-    }
-    .stat-number {
-        font-size: 2.5rem;
-    }
-    .stat-item i {
-        font-size: 2.5rem;
-    }
-    .sponsor-logos {
-        gap: 30px;
-    }
-    .sponsor-logos img {
-        max-width: 150px;
+    .topics-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
     .subscription-form {
         flex-direction: column;
@@ -730,9 +723,6 @@ footer h4 {
     }
 }
 
-
-/* --- MOBILE PORTRAIT --- */
-
 @media (max-width: 576px) {
     .logo img {
         height: 40px;
@@ -741,10 +731,7 @@ footer h4 {
         height: 35px;
     }
     .hero-title {
-        font-size: 2.2rem;
-    }
-    .stats-grid {
-        grid-template-columns: 1fr;
+        font-size: 1.8rem;
     }
     .footer-about .social-icons {
         justify-content: center;
